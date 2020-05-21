@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form ticket</title>
+  </head>
+  <body>
+    <main>
+      <section id="price">
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="space">
+          <div class="row">
+            <div class="element">
+              <label>Nome</label>
+              <input id="form-name"  class="capitalize" type="text">
+            </div>
+            <div class="element">
+              <label>Cognome</label>
+              <input id="form-surname"  class="capitalize" type="text">
+            </div>
+            <div class="element">
+              <label>Km da percorrere</label>
+              <input id="form-chilometers" type="number">
+            </div>
+            <div class="element">
+              <label>Fascia d'età</label>
+              <select id="anni">
+                <option value="empty">Seleziona</option>
+                <option value="minore">Ragazzo (0-17 anni)</option>
+                <option value="adulto">Adulto (18-64 anni)</option>
+                <option value="anziano">Adulto Over 65</option>
+              </select>
+            </div>
+          </div>
+          <div class="row buttons">
+            <button id="generate">Genera</button>
+            <button id="redo">Annulla</button>
+          </div>
+        </div>
+      </section>
+      <section id="ticket">
+        <h2>IL TUO BIGLIETTO</h2>
+        <div class="space">
+          <h3>DETTAGLI PASSEGGERO</h3>
+          <div class="ticket">
+            <div class="anagraphics">
+              <h4>NOME PASSEGGERO</h4>
+              <h4 class="inline capitalize" id="ticket-name"></h4>
+              <h4 class="inline capitalize" id="ticket-surname"></h4>
+            </div>
+            <div class="details">
+              <ul>
+                <li>
+                  Offerta <span id="offerta"></span>
+                </li>
+                <li>
+                  Carrozza <span id="carrozza"></span>
+                </li>
+                <li>
+                  Codice CP <span id="codice"></span>
+                </li>
+                <li>
+                  Costo Biglietto <span id="costo"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="text/javascript" src="js/script.js">
+    </script>
+  </body>
+</html>
