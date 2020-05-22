@@ -106,7 +106,3 @@ li span {
 input:focus::placeholder , select:focus::placeholder {
   color: #00C1C2;
 }
-
-.hide {
-  display: none;
-}
