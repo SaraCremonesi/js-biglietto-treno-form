@@ -39,10 +39,6 @@ section {
   margin-bottom: 5%;
 }
 
-.disp-none {
-  display: none;
-}
-
 .space {
   background-color: #E0FFFF;
   border-radius: 10px;
@@ -72,10 +68,15 @@ button {
   font-size: 1.17em;
   font-weight: 500;
   margin: 1.5%;
+  cursor: pointer; /*per far apparire la manina*/
 }
 
 li {
   display: inline-block;
+}
+
+li span {
+  display: flex;
 }
 
 .ticket {
@@ -84,12 +85,10 @@ li {
 
 .anagraphics {
   flex-basis: 40%;
-  background-color: yellow;
 }
 
 .details {
   flex-basis: 60%;
-  background-color: lime;
 }
 
 .inline {
@@ -98,4 +97,16 @@ li {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+/* input:focus , input:active , select:focus , select:active {
+  background-color: #C1FFFF;
+} */
+
+input:focus::placeholder , select:focus::placeholder {
+  color: #00C1C2;
+}
+
+.hide {
+  display: none;
 }

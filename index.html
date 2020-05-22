@@ -8,25 +8,25 @@
   </head>
   <body>
     <main>
-      <section id="price">
+      <section id="form">
         <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
         <div class="space">
           <div class="row">
             <div class="element">
               <label>Nome</label>
-              <input id="form-name"  class="capitalize" type="text">
+              <input id="form-name" placeholder="Nome" class="capitalize" type="text">
             </div>
             <div class="element">
               <label>Cognome</label>
-              <input id="form-surname"  class="capitalize" type="text">
+              <input id="form-surname" placeholder="Cognome" class="capitalize" type="text">
             </div>
             <div class="element">
               <label>Km da percorrere</label>
-              <input id="form-chilometers" type="number">
+              <input id="form-chilometers" placeholder="Km" type="number">
             </div>
             <div class="element">
               <label>Fascia d'età</label>
-              <select id="anni">
+              <select id="form-age">
                 <option value="empty">Seleziona</option>
                 <option value="minore">Ragazzo (0-17 anni)</option>
                 <option value="adulto">Adulto (18-64 anni)</option>
@@ -42,8 +42,9 @@
       </section>
       <section id="ticket">
         <h2>IL TUO BIGLIETTO</h2>
-        <div class="space">
-          <h3>DETTAGLI PASSEGGERO</h3>
+        <div class="hide"> <!--da nascondere da qui in poi-->
+          <div class="space">
+          <h3>DETTAGLI BIGLIETTO</h3>
           <div class="ticket">
             <div class="anagraphics">
               <h4>NOME PASSEGGERO</h4>
@@ -53,20 +54,21 @@
             <div class="details">
               <ul>
                 <li>
-                  Offerta <span id="offerta"></span>
+                  Offerta <span id="offer"></span>
                 </li>
                 <li>
-                  Carrozza <span id="carrozza"></span>
+                  Carrozza <span id="carriage"></span>
                 </li>
                 <li>
-                  Codice CP <span id="codice"></span>
+                  Codice CP <span id="code"></span>
                 </li>
                 <li>
-                  Costo Biglietto <span id="costo"></span>
+                  Costo Biglietto <span id="price"></span>
                 </li>
               </ul>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </main>
