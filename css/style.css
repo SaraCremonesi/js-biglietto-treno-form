@@ -95,14 +95,22 @@ li span {
   display: inline-block;
 }
 
+.visible {
+  display: block;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
 
-/* input:focus , input:active , select:focus , select:active {
-  background-color: #C1FFFF;
-} */
-
 input:focus::placeholder , select:focus::placeholder {
   color: #00C1C2;
 }
+
+.error p {
+  font-size: 1em;
+  color: tomato;
+}
+/* input:focus , input:active , select:focus , select:active {
+  background-color: #C1FFFF;
+} */

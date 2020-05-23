@@ -15,10 +15,10 @@ var ticketPrice = document.getElementById('price');
 var ticketOffer = document.getElementById('offer');
 var ticketCarriage = document.getElementById('carriage');
 var ticketCode = document.getElementById('code');
+var ticket = document.getElementById('ticket');
 
-
-// Price per chilometer
-
+// Error warning
+var error = document.getElementById('error');
 
 // Interactions with users (buttons)
 buttonGenera.addEventListener('click',
@@ -28,21 +28,28 @@ buttonGenera.addEventListener('click',
     var ageValue = formAge.value;
     var numberKm = parseInt(formKm.value);
 
-    var priceKm = numberKm * 0.21;
-    console.log(priceKm);
-    var offer = 'Prezzo intero';
+    if (isNaN(numberKm) || (formName.value).length == 0 || (formSurname.value).length == 0 || ageValue == 'empty') {
+      error.className = 'visible';
+    } else {
+      error.className = 'hidden';
+      ticket.className = 'visible';
 
-    if (ageValue == 'minore') {
-      priceKm = priceKm - (priceKm * 20 / 100);
-      offer = 'Sconto ragazzi';
-    } else if (ageValue == 'anziano') {
-      priceKm = priceKm - (priceKm * 40 / 100);
-      offer = 'Sconto over 65';
+      var priceKm = numberKm * 0.21;
+      var offer = 'Prezzo intero';
+
+      if (ageValue == 'minore') {
+        priceKm = priceKm - (priceKm * 20 / 100);
+        offer = 'Sconto ragazzi';
+      } else if (ageValue == 'anziano') {
+        priceKm = priceKm - (priceKm * 40 / 100);
+        offer = 'Sconto over 65';
+      }
+
+      ticketPrice.innerHTML = priceKm.toFixed(2) + '€';
+      ticketOffer.innerHTML = offer;
+      ticketCarriage.innerHTML = Math.floor(Math.random() * 10 ) + 1;
+      ticketCode.innerHTML = Math.floor(Math.random() * 100000) + 1;
     }
-
-    ticketPrice.innerHTML = priceKm.toFixed(2) + '$';
-    ticketOffer.innerHTML = offer;
-
   }
 );
 
@@ -54,17 +61,9 @@ buttonAnnulla.addEventListener('click',
      ticketSurname.innerHTML = '';
      formKm.value = '';
      formAge.value = 'empty';
+
+     ticket.className = 'hidden';
+     error.className = 'hidden';
+     hide.className = 'hidden';
    }
  );
-
-//  // Discounts
-//  if (formAge == 'minore') {
-//    kmPrice = kmPrice - (kmPrice * 20 / 100);
-//    offer = 'Sconto ragazzi';
-//  } else if (formAge == 'anziano') {
-//    kmPrice = kmPrice - (kmPrice * 40 / 100);
-//    offer = 'Sconto over 65';
-// };
-//
-//  ticketOffer.innerHTML = offer;
-//  ticketPrice.innerHTML = kmPrice + "$";
