@@ -110,3 +110,35 @@ input:focus::placeholder , select:focus::placeholder {
 /* input:focus , input:active , select:focus , select:active {
   background-color: #C1FFFF;
 } */
+
+@media screen and (max-width: 900px) {
+  .row {
+    display: block;
+    padding-left: 4%;
+  }
+
+  .element {
+    margin-bottom: 3%;
+  }
+
+  .ticket {
+    display: block;
+  }
+
+  .buttons {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .details li {
+    display: block;
+    margin-bottom: 4%;
+  }
+
+  body {
+    font-size: 1.7em;
+  }
+
+}
